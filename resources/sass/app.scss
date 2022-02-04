@@ -6,3 +6,46 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+header{
+    padding: 0 10px;
+    height: 100px;
+    background-color: rgb(99, 171, 212);
+    color: white;
+    display: flex;
+    align-items: center;
+    .logo{
+        width: 50px;
+    }
+    h1{
+        width: 100%;
+        text-align: center;
+    }
+}
+#registration{
+    margin: 30px 0;
+}
+.title_form{
+    color: rgb(42, 82, 105);
+    margin-top: 20px;
+}
+#user_check{
+    padding: 20px 0;
+    #top{
+        display: flex;
+        justify-content: space-between;
+    }
+    #logout{
+        background-color: rgb(99, 171, 212);
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 10px;
+        border-radius: 7px;
+    }
+}
