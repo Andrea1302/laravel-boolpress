@@ -23,6 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'MyController@home') -> name('home');
 Route::get('/auth', 'MyController@auth') -> name('auth');
+Route::get('/loginPages', 'MyController@login') -> name('loginPage');
+Route::get('/RegisterPages', 'MyController@register') -> name('RegisterPage');
+
 
 
 Route::post('/register', 'Auth\RegisterController@register') -> name('register');

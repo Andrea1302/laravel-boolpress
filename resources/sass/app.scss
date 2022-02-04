@@ -19,12 +19,24 @@ header{
     color: white;
     display: flex;
     align-items: center;
+  
+    .form{
+        text-decoration: none;
+        display: inline-block;
+        background-color: white;
+        color:rgb(99, 171, 212) ;
+        margin-left: 15px;
+        padding: 2px 8px;
+        border-radius: 5px;
+        font-weight: bold;
+        box-shadow: 0px 5px 13px 1px #375db6;
+    }
     .logo{
         width: 50px;
     }
     h1{
         width: 100%;
-        text-align: center;
+        margin: 0 0 0 15px;
     }
 }
 #registration{
@@ -34,18 +46,18 @@ header{
     color: rgb(42, 82, 105);
     margin-top: 20px;
 }
+
+#home{
+    padding: 30px 0;
+}
+
+
+// Auth
 #user_check{
     padding: 20px 0;
     #top{
         display: flex;
         justify-content: space-between;
     }
-    #logout{
-        background-color: rgb(99, 171, 212);
-        color: white;
-        display: flex;
-        align-items: center;
-        padding: 0 10px;
-        border-radius: 7px;
-    }
+   
 }

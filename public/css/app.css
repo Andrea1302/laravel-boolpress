@@ -10977,13 +10977,25 @@ header {
   align-items: center;
 }
 
+header .form {
+  text-decoration: none;
+  display: inline-block;
+  background-color: white;
+  color: #63abd4;
+  margin-left: 15px;
+  padding: 2px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0px 5px 13px 1px #375db6;
+}
+
 header .logo {
   width: 50px;
 }
 
 header h1 {
   width: 100%;
-  text-align: center;
+  margin: 0 0 0 15px;
 }
 
 #registration {
@@ -10995,6 +11007,10 @@ header h1 {
   margin-top: 20px;
 }
 
+#home {
+  padding: 30px 0;
+}
+
 #user_check {
   padding: 20px 0;
 }
@@ -11002,14 +11018,5 @@ header h1 {
 #user_check #top {
   display: flex;
   justify-content: space-between;
-}
-
-#user_check #logout {
-  background-color: #63abd4;
-  color: white;
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  border-radius: 7px;
 }
 

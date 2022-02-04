@@ -7,7 +7,6 @@
             <h1>
                 Hello  {{Auth::User() -> name}}
             </h1> 
-            <a id="logout" href="{{route('logout')}}">Logout</a>
         </div>  
       
      </div>  

@@ -14,4 +14,11 @@ class MyController extends Controller
     public function auth(){
         return view('pages.auth');
     }
+
+    public function login(){
+        return view('pages.login');
+    }
+    public function register(){
+        return view('pages.registration');
+    }
 }
