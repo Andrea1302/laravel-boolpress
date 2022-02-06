@@ -122,12 +122,15 @@ header{
 
 // Auth
 #user_check{
-
+    .logo_user{
+        height: 20px;
+    }
     #top{
         border-top: 2px solid rgb(81, 81, 160);
         border-bottom: 2px solid rgb(81, 81, 160);
         display: flex;
         align-items: center;
+        height: 40px;
         h1{
             font-style: italic;
             font-size: 1.2rem;
@@ -135,7 +138,7 @@ header{
         }
     }
     #blocco{
-        height: 85vh;
+        height: calc(  85vh - 40px ) ;
         display: flex;
     }
     #col_sx{

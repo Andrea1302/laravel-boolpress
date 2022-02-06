@@ -6,7 +6,7 @@
       <div id="user_check">
         <div id="top">
             <h1>
-                Hello  {{Auth::User() -> name}}
+                Hello  {{Auth::User() -> name}} <img class="logo_user" src="{{Auth::User()-> immagine_profilo }}" alt="">
             </h1> 
         </div>  
 

@@ -11083,11 +11083,16 @@ header h1 {
   }
 }
 
+#user_check .logo_user {
+  height: 20px;
+}
+
 #user_check #top {
   border-top: 2px solid #5151a0;
   border-bottom: 2px solid #5151a0;
   display: flex;
   align-items: center;
+  height: 40px;
 }
 
 #user_check #top h1 {
@@ -11097,7 +11102,7 @@ header h1 {
 }
 
 #user_check #blocco {
-  height: 85vh;
+  height: calc(85vh - 40px);
   display: flex;
 }
 

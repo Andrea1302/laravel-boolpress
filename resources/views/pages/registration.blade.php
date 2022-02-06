@@ -33,6 +33,14 @@
               <input type="password" class="form-control" id="" name="password_confirmation">
             </div>
          
+
+            {{-- immagine password  --}}
+          <div class="mb-3">
+            <label for="immagine_profilo" class="form-label">Immagine profilo</label>
+            <input name="immagine_profilo" type="file" class="form-control">
+          </div>
+
+
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
 @endsection
