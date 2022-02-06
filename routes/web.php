@@ -32,4 +32,10 @@ Route::post('/register', 'Auth\RegisterController@register') -> name('register')
 Route::post('/login', 'Auth\LoginController@login') -> name('login');
 Route::get('/logout', 'Auth\LoginController@logout') -> name('logout');
 
+Route::post('/store', 'MyController@store') -> name('store');
+
+
+// API
+Route::get('/posts/list', 'MyController@getApi') ->name('postsApi');
+
 

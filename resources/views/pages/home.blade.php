@@ -3,7 +3,7 @@
 @section('content')
 
     <div id="home" class="container">
-      Home
+      
 
 
         

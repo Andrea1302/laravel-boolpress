@@ -1,6 +1,6 @@
 
 <header>
-    <img class="logo" src="{{asset('img/boolean.png')}}" alt="">
+    <img class="logo" src="{{asset('storage/img/boolean.png')}}" alt="">
     <h1>
         Boolpress
     </h1>

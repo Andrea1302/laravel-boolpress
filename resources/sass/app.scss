@@ -14,7 +14,7 @@
 }
 header{
     padding: 0 10px;
-    height: 100px;
+    height: 10vh;
     background-color: rgb(99, 171, 212);
     color: white;
     display: flex;
@@ -54,10 +54,96 @@ header{
 
 // Auth
 #user_check{
-    padding: 20px 0;
+
     #top{
+        border-top: 2px solid rgb(81, 81, 160);
+        border-bottom: 2px solid rgb(81, 81, 160);
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        h1{
+            font-style: italic;
+            font-size: 1.2rem;
+        }
     }
-   
+    #blocco{
+        height: 85vh;
+        display: flex;
+    }
+    #col_sx{
+        height: 100%;
+        border-right: 2px solid rgb(81, 81, 160);
+    }
+   #visualizzazione{
+
+
+       #view{
+           height: 85%;
+           background-image: url('storage/img/bg2.webp');
+           background-repeat: no-repeat;
+            background-size: cover;
+            overflow: scroll;
+       }
+      #nomeUser{
+          font-weight: bold;
+          color: black;
+          font-size: 20px;
+          margin-bottom: 10px;
+      }
+      ul{
+          padding: 15px;
+      }
+      li{
+          width: 45%;
+          list-style: none;
+          margin: 20px 0;
+            background-color: rgb(99, 171, 212);
+            padding:5px;
+            border-radius: 8px;
+
+      }
+      #testopost{
+
+      }
+       #invio_{
+           width: 15%;
+           height: 100%;
+           background-color: red;
+       }
+       #new{
+           height: 15%;
+           form{
+               height: 100%;
+               display: flex;
+               #input_{
+                   width: 10%;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   #invia{
+                        text-decoration: none;
+                        border-style: none;
+                        width: 100%;
+                        height: 100%;
+                        border: 1px solid black;
+                    }
+               }
+           }
+           textarea{
+               padding: 5px;
+            height: 100%;
+            width: 90%;
+            #btn_invia{
+                display: inline-block;
+                width: 10%;
+                height: 100%;
+                text-decoration: none;
+                list-style: none;
+            }
+        }
+        #autore{
+            display: none;
+        }
+       }
+     
+   }
 }
