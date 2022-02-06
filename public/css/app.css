@@ -10969,8 +10969,8 @@ a.text-dark:focus {
 }
 
 header {
-  padding: 0 10px;
-  height: 10vh;
+  padding: 0 50px;
+  height: 15vh;
   background-color: #63abd4;
   color: white;
   display: flex;
@@ -10990,12 +10990,17 @@ header .form {
 }
 
 header .logo {
+  border-radius: 50%;
   width: 50px;
 }
 
 header h1 {
   width: 100%;
   margin: 0 0 0 15px;
+}
+
+#regitra input {
+  width: 40%;
 }
 
 #registration {
@@ -11008,7 +11013,74 @@ header h1 {
 }
 
 #home {
-  padding: 30px 0;
+  background-color: black;
+  padding: 0;
+  height: 85vh;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home .benvenuti {
+  color: #63abd4;
+  font-size: 30px;
+  font-weight: bold;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+#home .title {
+  text-align: center;
+  width: 100%;
+  letter-spacing: 15px;
+  padding-top: 30px;
+}
+
+#home h1 {
+  font-family: "Montserrat";
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 120px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  transition: all 4s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 50%;
+    width: 200%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 
 #user_check #top {
@@ -11021,6 +11093,7 @@ header h1 {
 #user_check #top h1 {
   font-style: italic;
   font-size: 1.2rem;
+  margin: 0;
 }
 
 #user_check #blocco {

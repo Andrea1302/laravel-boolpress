@@ -13,8 +13,8 @@
     padding: 0;
 }
 header{
-    padding: 0 10px;
-    height: 10vh;
+    padding: 0 50px;
+    height: 15vh;
     background-color: rgb(99, 171, 212);
     color: white;
     display: flex;
@@ -32,11 +32,19 @@ header{
         box-shadow: 0px 5px 13px 1px #375db6;
     }
     .logo{
+        border-radius: 50%;
         width: 50px;
+        // box-shadow: 0px 0px 13px 1px white;
     }
     h1{
         width: 100%;
         margin: 0 0 0 15px;
+    }
+}
+
+#regitra{
+    input{
+        width: 40%;
     }
 }
 #registration{
@@ -48,7 +56,67 @@ header{
 }
 
 #home{
-    padding: 30px 0;
+    background-color: black;
+    padding:  0;
+    height: 85vh;
+    overflow-y: scroll;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .benvenuti{
+        // height: 20%;
+        color:rgb(99, 171, 212) ;
+        font-size: 30px;
+        font-weight: bold;
+        animation-duration: 3s;
+        animation-name: slidein;
+      }
+      .title {
+        // height: 80%;
+        text-align: center;
+        // height: 80%;
+        width: 100%;
+        letter-spacing: 15px;
+        padding-top: 30px;
+      }
+      
+      h1 {
+        font-family: "Montserrat";
+        font-family: sans-serif;
+          text-align: center;
+        background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+        background-size: cover;
+        color: transparent;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        text-transform: uppercase;
+        font-size: 120px;
+        margin-bottom: 10px;
+        font-weight: bold;
+        transition: all 4s;
+        animation-duration: 4s;
+        animation-name: slidein;
+
+      }
+      @keyframes slidein {
+        from {
+          margin-left: 50%;
+          width: 200%;
+        }
+      
+        // 50% {
+        // //   font-size: 200%;
+        // //   margin-left: 25%;
+        //   width: 100%;
+        // }
+      
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+      }
+      
+    
 }
 
 
@@ -63,6 +131,7 @@ header{
         h1{
             font-style: italic;
             font-size: 1.2rem;
+            margin: 0;
         }
     }
     #blocco{

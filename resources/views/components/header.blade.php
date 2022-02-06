@@ -1,6 +1,8 @@
 
 <header>
-    <img class="logo" src="{{asset('storage/img/boolean.png')}}" alt="">
+    <a href="{{route('logout')}}">
+        <img class="logo" src="{{asset('storage/img/boolean.png')}}" alt="">
+    </a>
     <h1>
         Boolpress
     </h1>
