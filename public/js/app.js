@@ -1964,12 +1964,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       posts: [],
-      colori: ["bg-primary", "bg-secondary", "bg-success", "bg-danger", "bg-warning", "bg-info", "bg-light", // "bg-dark",
-      "bg-body", "bg-white"]
+      // colori : [
+      //     "bg-primary",
+      //     "bg-secondary",
+      //     "bg-success",
+      //     "bg-danger",
+      //     "bg-warning",
+      //     "bg-info",
+      //     "bg-light",
+      //     // "bg-dark",
+      //     "bg-body",
+      //     "bg-white",
+      // ],
+      users: [],
+      idUser: [],
+      active: "",
+      colore: []
     };
   },
   methods: {
@@ -1980,13 +1995,40 @@ __webpack_require__.r(__webpack_exports__);
       //     let colore = `${primoColore},${secondoColore},${terzoColore}`;
 
       return numberRandom; //     return `rgb(${colore})`;
-    }
+    },
+    // prova(postId){
+    //     console.log('postid = ' + postId + "userId = " + this.usersId) ;
+    // },
+    checkcolor: function checkcolor() {} // verify(postId){
+    //     this.users.forEach(element => {
+    //         console.log(element);
+    //     });
+    //     // this.users.forEach(user => {
+    //     //    let userId = user.id;
+    //     //    console.log(userId);
+    //     //      if (userId == postId){
+    //     //     return true
+    //     // } else {
+    //     //     return false
+    //     // }
+    //     // });
+    //     console.log(this.active);
+    // },
+
   },
   created: function created() {
     var _this = this;
 
     axios.get('/posts/list').then(function (res) {
       _this.posts = res.data;
+    })["catch"](function (err) {
+      console.error(err);
+    });
+    axios.get('/user/information/').then(function (res) {
+      var users = res.data;
+      users.forEach(function (element) {
+        console.log(element);
+      });
     })["catch"](function (err) {
       console.error(err);
     });
@@ -37628,17 +37670,16 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { attrs: { id: "view" } },
-    _vm._l(_vm.posts, function (post, i) {
-      return _c("ul", { key: i }, [
-        _c("li", { class: _vm.colori[_vm.checkUserColor()] }, [
+  return _c("div", { attrs: { id: "view" } }, [
+    _c(
+      "ul",
+      _vm._l(_vm.posts, function (post, i) {
+        return _c("li", { key: i }, [
           _c("div", { attrs: { id: "nomeUser" } }, [
             _vm._v(
               "\n                              " +
                 _vm._s(post.autore) +
-                "\n                           "
+                " : \n                           "
             ),
           ]),
           _vm._v(" "),
@@ -37657,11 +37698,11 @@ var render = function () {
                 "\n                           "
             ),
           ]),
-        ]),
-      ])
-    }),
-    0
-  )
+        ])
+      }),
+      0
+    ),
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

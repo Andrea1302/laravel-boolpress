@@ -23,17 +23,10 @@ class MyController extends Controller
         return view('pages.registration');
     }
 
-    public function store( Request $request){
-
-        $data = $request -> validate([
-          'testo_post' => 'required',
-          'autore' =>'required'
-        ]);
-
-        $post = Post::create($data);
-
-        return redirect() -> route('auth');
-
+  
+    public function getApiUser(){
+        $user = User::All();
+        return json_encode($user);
     }
     public function getApi(){
 

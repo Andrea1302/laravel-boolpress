@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Post; 
 
 class HomeController extends Controller
 {
@@ -16,6 +17,19 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
+    public function store( Request $request){
+
+        $data = $request -> validate([
+            'userId' => 'required',
+          'testo_post' => 'required',
+          'autore' =>'required'
+        ]);
+
+        $post = Post::create($data);
+
+        return redirect() -> route('auth');
+
+    }
     /**
      * Show the application dashboard.
      *

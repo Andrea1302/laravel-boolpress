@@ -11131,10 +11131,10 @@ header h1 {
 }
 
 #user_check #visualizzazione li {
+  border: 2px solid #5151a0;
   width: 45%;
   list-style: none;
   margin: 20px 0;
-  background-color: #63abd4;
   padding: 5px;
   border-radius: 8px;
 }
@@ -11184,6 +11184,10 @@ header h1 {
 }
 
 #user_check #visualizzazione #new #autore {
+  display: none;
+}
+
+#user_check #visualizzazione #new #user_id {
   display: none;
 }
 

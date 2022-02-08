@@ -34,10 +34,18 @@
             </div>
          
 
-            {{-- immagine password  --}}
+            {{-- immagine   --}}
           <div class="mb-3">
-            <label for="immagine_profilo" class="form-label">Immagine profilo</label>
-            <input name="immagine_profilo" type="file" class="form-control">
+            <select name="colore" class="form-select form-select-sm" aria-label=".form-select-sm example">
+              <option selected>Scegli colore</option>
+              <option value="bg-primary">blue</option>
+              <option value="bg-light">white</option>
+              <option value="bg-info">lightblue</option>
+              <option value="bg-secondary">grey</option>
+              <option value="bg-dark">black</option>
+
+            </select>
+
           </div>
 
 

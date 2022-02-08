@@ -1,10 +1,11 @@
 <template>
      <div id="view" >
-                    <ul v-for="post,i in posts" :key="i">
+                    <ul >
                         
-                            <li :class="colori[checkUserColor()]">
+                            <li   v-for="post,i in posts" :key="i"   >
+                             <!-- :class="verify(post.userId)? 'bg-primary' : 'bg-light'" -->
                                <div id="nomeUser">
-                                   {{post.autore}}
+                                   {{post.autore}} : 
                                 </div>
                             
                                 <div id="testopost">   
@@ -26,22 +27,29 @@
         data(){
             return{
                 posts : [],
-                colori : [
-                    "bg-primary",
-                    "bg-secondary",
-                    "bg-success",
-                    "bg-danger",
-                    "bg-warning",
-                    "bg-info",
-                    "bg-light",
-                    // "bg-dark",
-                    "bg-body",
-                    "bg-white",
+                // colori : [
+                //     "bg-primary",
+                //     "bg-secondary",
+                //     "bg-success",
+                //     "bg-danger",
+                //     "bg-warning",
+                //     "bg-info",
+                //     "bg-light",
+                //     // "bg-dark",
+                //     "bg-body",
+                //     "bg-white",
 
+                // ],
+                users : [],
+                idUser : [],
+                active : "",
+                colore : [
+                    
                 ],
             }
         },
         methods :{
+           
             checkUserColor(){
                     let numberRandom = Math.floor(Math.random() * 9);
             //    let primoColore =   Math.floor(Math.random() * 257);
@@ -52,7 +60,30 @@
                     return numberRandom;
             //     return `rgb(${colore})`;
 
-            }
+            },
+            // prova(postId){
+            //     console.log('postid = ' + postId + "userId = " + this.usersId) ;
+            // },
+
+            checkcolor(){
+               
+            },
+            // verify(postId){
+            //     this.users.forEach(element => {
+            //         console.log(element);
+            //     });
+            //     // this.users.forEach(user => {
+            //     //    let userId = user.id;
+            //     //    console.log(userId);
+            //     //      if (userId == postId){
+            //     //     return true
+            //     // } else {
+            //     //     return false
+            //     // }
+            //     // });
+               
+            //     console.log(this.active);
+            // },
         },
         created() {
             axios.get('/posts/list')
@@ -60,8 +91,24 @@
                 this.posts = res.data;
             }).catch(err=>{
                 console.error(err);
-            })
-        
+            });
+
+
+            axios.get('/user/information/')
+            .then(res => {
+                let users = res.data;
+                users.forEach(element => {
+                    console.log(element);
+                });
+            }).catch(err=>{
+                console.error(err);
+            });
+
+              
+            
         },
+       
+      
     }
+    
 </script>

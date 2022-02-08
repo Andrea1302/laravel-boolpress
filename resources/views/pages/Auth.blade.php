@@ -6,7 +6,7 @@
       <div id="user_check">
         <div id="top">
             <h1>
-                Hello  {{Auth::User() -> name}} <img class="logo_user" src="{{Auth::User()-> immagine_profilo }}" alt="">
+                Hello  {{Auth::User() -> name}} 
             </h1> 
         </div>  
 
@@ -38,12 +38,14 @@
                 </views-component> 
 
                 <div id="new">
-
+                    
                     <form action="{{route('store')}}" method="post"> 
                         @method('post')
                         @csrf
 
                         <input type="text" name="autore" id="autore" value="{{Auth::User() -> name}}">
+                        <input type="text" name="userId" id="user_id" value="{{Auth::User() -> id}}">
+
 
                         <textarea name="testo_post" placeholder="Inserisci testo">
                         </textarea>
