@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;
 use App\User;
+use App\Category;
+use App\Tag;
+
 
 class MyController extends Controller
 {
@@ -13,7 +16,11 @@ class MyController extends Controller
     }
     public function auth(){
         $posts = Post::All();
-        return view('pages.auth',compact('posts'));
+
+        $categories = Category::all();
+        $tags = Tag::All();
+
+        return view('pages.auth',compact('posts','categories','tags'));
     }
 
     public function login(){

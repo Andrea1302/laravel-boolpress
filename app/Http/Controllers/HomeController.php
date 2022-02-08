@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post; 
+use App\Category;
+use App\Tag; 
+
+
 
 class HomeController extends Controller
 {
@@ -20,12 +24,19 @@ class HomeController extends Controller
     public function store( Request $request){
 
         $data = $request -> validate([
-            'userId' => 'required',
           'testo_post' => 'required',
           'autore' =>'required'
         ]);
 
-        $post = Post::create($data);
+        $post = Post::make($data);
+        $category = Category::findOrFail($request -> get('category'));
+        $post -> category() -> associate($category);
+        $post -> save();
+
+
+        $tags = Tag::findOrFail($request -> get('tags'));
+        $post -> tags() -> attach($tags);
+        $post -> save();
 
         return redirect() -> route('auth');
 

@@ -44,12 +44,19 @@
                         @csrf
 
                         <input type="text" name="autore" id="autore" value="{{Auth::User() -> name}}">
-                        <input type="text" name="userId" id="user_id" value="{{Auth::User() -> id}}">
-
+                        
 
                         <textarea name="testo_post" placeholder="Inserisci testo">
                         </textarea>
-                        
+                        <label for="category">Category</label>
+                        <select name="category" id="">
+                            @foreach ($categories as $category)
+                                <option value="{{$category -> id}}">{{$category -> name}}</option> 
+                            @endforeach
+                        </select>
+                        @foreach ($tags as $tag)
+                            <input type="checkbox" name="tags[]" value="{{$tag -> id }}">  {{$tag -> name}}
+                        @endforeach
                         <div id="input_">
                             <input id="invia" type="submit" value="Invia">
                         </div>
